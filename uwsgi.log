@@ -1,0 +1,556 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jan  7 23:33:01 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+writing pidfile to uwsgi.pid
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x55e9d26347d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55e9d26347d0 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9071, cores: 10)
+spawned uWSGI worker 2 (pid: 9072, cores: 10)
+spawned uWSGI worker 3 (pid: 9073, cores: 10)
+spawned uWSGI worker 4 (pid: 9074, cores: 10)
+[pid: 9072|app: 0|req: 1/1] 161.117.184.210 () {40 vars in 731 bytes} [Wed Jan  8 15:33:17 2020] GET /pay/onlinepay/ => generated 7415 bytes in 433 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9071|app: 0|req: 1/2] 220.202.152.27 () {40 vars in 926 bytes} [Wed Jan  8 15:33:37 2020] GET /pay/onlinepay/ => generated 7415 bytes in 357 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9071|app: 0|req: 2/3] 220.202.152.27 () {40 vars in 886 bytes} [Wed Jan  8 15:33:39 2020] GET /favicon.ico => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 9071|app: 0|req: 3/4] 220.202.152.27 () {40 vars in 926 bytes} [Wed Jan  8 15:34:08 2020] GET /pay/onlinepay/ => generated 7415 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 9071|app: 0|req: 4/5] 220.202.152.27 () {40 vars in 886 bytes} [Wed Jan  8 15:34:09 2020] GET /favicon.ico => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 9071|app: 0|req: 5/6] 220.202.152.27 () {40 vars in 754 bytes} [Wed Jan  8 15:34:23 2020] GET /pay/onlinepay/ => generated 7415 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 5)
+[pid: 9071|app: 0|req: 6/7] 220.202.152.27 () {40 vars in 722 bytes} [Wed Jan  8 15:34:27 2020] GET /favicon.ico => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 5)
+[pid: 9071|app: 0|req: 7/8] 101.91.60.110 () {36 vars in 561 bytes} [Wed Jan  8 15:34:30 2020] GET /pay/onlinepay => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 120 bytes (1 switches on core 4)
+[pid: 9073|app: 0|req: 1/9] 220.202.152.27 () {42 vars in 809 bytes} [Wed Jan  8 15:34:39 2020] GET /pay/onlinepay/ => generated 7415 bytes in 407 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 9071|app: 0|req: 8/10] 220.202.152.27 () {42 vars in 809 bytes} [Wed Jan  8 15:34:52 2020] GET /pay/onlinepay/ => generated 7415 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 4)
+[pid: 9071|app: 0|req: 9/11] 161.117.190.188 () {42 vars in 727 bytes} [Wed Jan  8 15:37:50 2020] GET / => generated 7415 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 8)
+[pid: 9071|app: 0|req: 10/12] 161.117.230.29 () {42 vars in 726 bytes} [Wed Jan  8 15:38:17 2020] GET / => generated 7415 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 9)
+[pid: 9071|app: 0|req: 11/13] 161.117.177.241 () {42 vars in 727 bytes} [Wed Jan  8 15:39:07 2020] GET / => generated 7415 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9071|app: 0|req: 12/14] 47.56.173.34 () {42 vars in 758 bytes} [Wed Jan  8 15:39:36 2020] GET /pay/payjin66/ => generated 6816 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 9071|app: 0|req: 13/15] 180.163.220.5 () {38 vars in 844 bytes} [Wed Jan  8 15:39:42 2020] GET /pay/payjin66 => generated 0 bytes in 2 msecs (HTTP/1.1 301) 3 headers in 119 bytes (1 switches on core 2)
+[pid: 9071|app: 0|req: 14/16] 180.163.220.5 () {44 vars in 930 bytes} [Wed Jan  8 15:39:43 2020] GET /pay/payjin66 => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 119 bytes (1 switches on core 3)
+[pid: 9073|app: 0|req: 2/17] 180.163.220.5 () {44 vars in 932 bytes} [Wed Jan  8 15:39:44 2020] GET /pay/payjin66/ => generated 6816 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+110
+[pid: 9073|app: 0|req: 3/18] 47.56.173.34 () {50 vars in 968 bytes} [Wed Jan  8 15:39:45 2020] POST /pay/controllerjin66/ => generated 196 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 2)
+[pid: 9073|app: 0|req: 4/19] 180.163.220.66 () {44 vars in 945 bytes} [Wed Jan  8 15:39:48 2020] GET /pay/controllerjin66 => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 126 bytes (1 switches on core 5)
+None
+[pid: 9073|app: 0|req: 5/20] 180.163.220.66 () {44 vars in 947 bytes} [Wed Jan  8 15:39:48 2020] GET /pay/controllerjin66/ => generated 27 bytes in 125 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 5)
+[pid: 9073|app: 0|req: 6/21] 180.163.220.66 () {44 vars in 945 bytes} [Wed Jan  8 15:39:56 2020] GET /pay/controllerjin66 => generated 0 bytes in 4 msecs (HTTP/1.1 301) 3 headers in 126 bytes (1 switches on core 9)
+None
+[pid: 9073|app: 0|req: 7/22] 180.163.220.66 () {44 vars in 947 bytes} [Wed Jan  8 15:39:57 2020] GET /pay/controllerjin66/ => generated 27 bytes in 23 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+[pid: 9073|app: 0|req: 8/23] 161.117.85.58 () {40 vars in 694 bytes} [Wed Jan  8 15:45:46 2020] GET / => generated 7415 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 4)
+[pid: 9073|app: 0|req: 9/24] 161.117.227.246 () {42 vars in 727 bytes} [Wed Jan  8 15:45:50 2020] GET / => generated 7415 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 6)
+[pid: 9071|app: 0|req: 15/25] 161.117.82.112 () {42 vars in 726 bytes} [Wed Jan  8 15:47:28 2020] GET / => generated 7415 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 9071|app: 0|req: 16/26] 47.240.66.60 () {40 vars in 693 bytes} [Wed Jan  8 15:47:48 2020] GET / => generated 7415 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 5)
+[pid: 9071|app: 0|req: 17/27] 161.117.85.96 () {42 vars in 725 bytes} [Wed Jan  8 15:49:08 2020] GET / => generated 7415 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 7)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9071)...
+Gracefully killing worker 2 (pid: 9072)...
+Gracefully killing worker 3 (pid: 9073)...
+Gracefully killing worker 4 (pid: 9074)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/OnlinePay
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /home/wqk/.virtualenvs/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 15:50:06 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x559347a05b80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x559347a05b80 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9180, cores: 10)
+spawned uWSGI worker 2 (pid: 9181, cores: 10)
+spawned uWSGI worker 3 (pid: 9182, cores: 10)
+spawned uWSGI worker 4 (pid: 9183, cores: 10)
+[pid: 9182|app: 0|req: 1/1] 161.117.227.246 () {42 vars in 727 bytes} [Wed Jan  8 15:50:10 2020] GET / => generated 7460 bytes in 419 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9180)...
+Gracefully killing worker 2 (pid: 9181)...
+Gracefully killing worker 3 (pid: 9182)...
+Gracefully killing worker 4 (pid: 9183)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/OnlinePay
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /home/wqk/.virtualenvs/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 15:58:27 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x562afe716b80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x562afe716b80 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9404, cores: 10)
+spawned uWSGI worker 2 (pid: 9405, cores: 10)
+spawned uWSGI worker 3 (pid: 9406, cores: 10)
+spawned uWSGI worker 4 (pid: 9407, cores: 10)
+[pid: 9406|app: 0|req: 1/1] 161.117.180.171 () {40 vars in 696 bytes} [Wed Jan  8 15:58:36 2020] GET / => generated 7450 bytes in 341 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9406|app: 0|req: 2/2] 47.240.93.154 () {40 vars in 641 bytes} [Wed Jan  8 15:58:39 2020] GET /favicon.ico => generated 77 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 9406|app: 0|req: 3/3] 185.100.87.190 () {26 vars in 267 bytes} [Wed Jan  8 16:03:12 2020] GET / => generated 26 bytes in 93 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 3)
+[pid: 9407|app: 0|req: 1/4] 185.100.87.190 () {26 vars in 267 bytes} [Wed Jan  8 16:05:09 2020] GET / => generated 26 bytes in 455 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 9407|app: 0|req: 3/5] 185.100.87.190 () {34 vars in 476 bytes} [Wed Jan  8 16:05:09 2020] POST /sdk => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 9407|app: 0|req: 3/6] 185.100.87.190 () {32 vars in 488 bytes} [Wed Jan  8 16:05:09 2020] GET /nmaplowercheck1578470708 => generated 77 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 4)
+[pid: 9407|app: 0|req: 4/7] 185.100.87.190 () {32 vars in 441 bytes} [Wed Jan  8 16:05:09 2020] HEAD / => generated 7450 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 9407|app: 0|req: 5/8] 185.100.87.190 () {28 vars in 295 bytes} [Wed Jan  8 16:05:09 2020] GET / => generated 7450 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 9407|app: 0|req: 6/9] 185.100.87.190 () {32 vars in 460 bytes} [Wed Jan  8 16:05:10 2020] GET /evox/about => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 5)
+[pid: 9404|app: 0|req: 1/10] 185.100.87.190 () {32 vars in 450 bytes} [Wed Jan  8 16:05:10 2020] GET /HNAP1 => generated 77 bytes in 260 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9404)...
+Gracefully killing worker 2 (pid: 9405)...
+Gracefully killing worker 3 (pid: 9406)...
+Gracefully killing worker 4 (pid: 9407)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/OnlinePay
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /home/wqk/.virtualenvs/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 16:09:39 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x55a1fa043b80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a1fa043b80 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9520, cores: 10)
+spawned uWSGI worker 2 (pid: 9521, cores: 10)
+spawned uWSGI worker 3 (pid: 9522, cores: 10)
+spawned uWSGI worker 4 (pid: 9523, cores: 10)
+[pid: 9520|app: 0|req: 1/1] 47.75.92.50 () {42 vars in 723 bytes} [Wed Jan  8 16:09:42 2020] GET / => generated 7450 bytes in 251 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 2 (pid: 9521)...
+Gracefully killing worker 3 (pid: 9522)...
+Gracefully killing worker 4 (pid: 9523)...
+Gracefully killing worker 1 (pid: 9520)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/OnlinePay
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /home/wqk/.virtualenvs/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 16:10:17 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x563b616eeb80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x563b616eeb80 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9566, cores: 10)
+spawned uWSGI worker 2 (pid: 9567, cores: 10)
+spawned uWSGI worker 3 (pid: 9568, cores: 10)
+spawned uWSGI worker 4 (pid: 9569, cores: 10)
+[pid: 9566|app: 0|req: 1/1] 149.129.75.135 () {42 vars in 726 bytes} [Wed Jan  8 16:10:20 2020] GET / => generated 7451 bytes in 269 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9566|app: 0|req: 2/2] 47.75.92.50 () {42 vars in 757 bytes} [Wed Jan  8 16:10:25 2020] GET /pay/payjin66/ => generated 6778 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 9566|app: 0|req: 3/3] 149.129.75.135 () {42 vars in 762 bytes} [Wed Jan  8 16:10:33 2020] GET /pay/payjineng/ => generated 6790 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 9566|app: 0|req: 4/4] 180.163.220.5 () {44 vars in 931 bytes} [Wed Jan  8 16:10:36 2020] GET /pay/payjineng => generated 0 bytes in 4 msecs (HTTP/1.1 301) 3 headers in 120 bytes (1 switches on core 3)
+[pid: 9566|app: 0|req: 5/5] 180.163.220.5 () {44 vars in 933 bytes} [Wed Jan  8 16:10:36 2020] GET /pay/payjineng/ => generated 6790 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 4)
+[pid: 9566|app: 0|req: 6/6] 47.240.93.154 () {42 vars in 761 bytes} [Wed Jan  8 16:10:42 2020] GET /pay/paysancai/ => generated 6822 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 7)
+[pid: 9566|app: 0|req: 7/7] 180.163.220.66 () {38 vars in 847 bytes} [Wed Jan  8 16:10:49 2020] GET /pay/paysancai => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 120 bytes (1 switches on core 8)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9566)...
+Gracefully killing worker 2 (pid: 9567)...
+Gracefully killing worker 3 (pid: 9568)...
+Gracefully killing worker 4 (pid: 9569)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+Wed Jan  8 16:13:08 2020 - worker 4 (pid: 9569) is taking too much time to die...NO MERCY !!!
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/OnlinePay
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /home/wqk/.virtualenvs/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 16:13:09 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x55d060ed2b80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55d060ed2b80 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9613, cores: 10)
+spawned uWSGI worker 2 (pid: 9614, cores: 10)
+spawned uWSGI worker 3 (pid: 9633, cores: 10)
+spawned uWSGI worker 4 (pid: 9634, cores: 10)
+[pid: 9613|app: 0|req: 1/1] 47.75.92.50 () {42 vars in 723 bytes} [Wed Jan  8 16:13:10 2020] GET / => generated 7451 bytes in 643 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9614|app: 0|req: 3/2] 161.117.14.89 () {42 vars in 769 bytes} [Wed Jan  8 16:13:10 2020] GET /pay/payrenshenguo/ => generated 6691 bytes in 747 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9614|app: 0|req: 3/3] 47.240.93.154 () {42 vars in 769 bytes} [Wed Jan  8 16:13:10 2020] GET /pay/payrenshenguo/ => generated 6691 bytes in 740 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 9614|app: 0|req: 3/4] 161.117.230.13 () {40 vars in 695 bytes} [Wed Jan  8 16:13:10 2020] GET / => generated 7451 bytes in 739 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 9633|app: 0|req: 1/5] 161.117.230.13 () {42 vars in 772 bytes} [Wed Jan  8 16:13:16 2020] GET /pay/payxingshendan/ => generated 6693 bytes in 292 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9633|app: 0|req: 2/6] 161.117.179.189 () {42 vars in 763 bytes} [Wed Jan  8 16:13:20 2020] GET /pay/payjineng/ => generated 6802 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9613)...
+Gracefully killing worker 2 (pid: 9614)...
+Gracefully killing worker 3 (pid: 9633)...
+Gracefully killing worker 4 (pid: 9634)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/OnlinePay
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /home/wqk/.virtualenvs/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 16:24:41 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x560cd737bb80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x560cd737bb80 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9687, cores: 10)
+spawned uWSGI worker 2 (pid: 9688, cores: 10)
+spawned uWSGI worker 3 (pid: 9689, cores: 10)
+spawned uWSGI worker 4 (pid: 9690, cores: 10)
+[pid: 9689|app: 0|req: 1/1] 47.240.93.154 () {44 vars in 792 bytes} [Wed Jan  8 16:24:48 2020] GET /pay/payjineng/ => generated 6802 bytes in 323 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9689|app: 0|req: 2/2] 161.117.187.247 () {50 vars in 974 bytes} [Wed Jan  8 16:24:54 2020] POST /pay/controllerjineng/ => generated 195 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+[pid: 9689|app: 0|req: 3/3] 223.155.62.25 () {42 vars in 718 bytes} [Wed Jan  8 16:26:51 2020] GET / => generated 7451 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 9689|app: 0|req: 4/4] 223.155.62.25 () {42 vars in 659 bytes} [Wed Jan  8 16:27:05 2020] GET /favicon.ico => generated 77 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 9689|app: 0|req: 5/5] 223.155.62.25 () {44 vars in 783 bytes} [Wed Jan  8 16:27:35 2020] GET /pay/payjin66/ => generated 6778 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 4)
+111
+[pid: 9687|app: 0|req: 1/6] 223.155.62.25 () {52 vars in 993 bytes} [Wed Jan  8 16:28:48 2020] POST /pay/controllerjin66/ => generated 197 bytes in 19853 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+112
+[pid: 9687|app: 0|req: 2/7] 223.155.62.25 () {52 vars in 993 bytes} [Wed Jan  8 16:30:50 2020] POST /pay/controllerjin66/ => generated 197 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 4)
+[pid: 9687|app: 0|req: 3/8] 223.155.62.25 () {44 vars in 785 bytes} [Wed Jan  8 16:31:44 2020] GET /pay/paysancai/ => generated 6852 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 6)
+[pid: 9687|app: 0|req: 4/9] 223.155.62.25 () {52 vars in 996 bytes} [Wed Jan  8 16:31:53 2020] POST /pay/controllersancai/ => generated 197 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9687)...
+Gracefully killing worker 2 (pid: 9688)...
+Gracefully killing worker 3 (pid: 9689)...
+Gracefully killing worker 4 (pid: 9690)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/OnlinePay
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /home/wqk/.virtualenvs/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 16:32:56 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x55dc5e3bcb80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55dc5e3bcb80 pid: 9069 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9069)
+spawned uWSGI worker 1 (pid: 9745, cores: 10)
+spawned uWSGI worker 2 (pid: 9746, cores: 10)
+spawned uWSGI worker 3 (pid: 9747, cores: 10)
+spawned uWSGI worker 4 (pid: 9748, cores: 10)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  8 01:30:16 2020] ***
+compiled with version: 7.4.0 on 08 January 2020 07:13:47
+os: Linux-4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+nodename: wqk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/OnlinePay
+writing pidfile to uwsgi.pid
+detected binary path: /home/wqk/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/OnlinePay
+your processes number limit is 1710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x557b1e997bb0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 834320 bytes (814 KB) for 40 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557b1e997bb0 pid: 10249 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10249)
+spawned uWSGI worker 1 (pid: 10251, cores: 10)
+spawned uWSGI worker 2 (pid: 10252, cores: 10)
+spawned uWSGI worker 3 (pid: 10253, cores: 10)
+spawned uWSGI worker 4 (pid: 10254, cores: 10)
+[pid: 10251|app: 0|req: 1/1] 161.117.187.247 () {40 vars in 728 bytes} [Wed Jan  8 17:30:55 2020] GET /pay/getpaidinfo/ => generated 27 bytes in 25573 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+我开始执行cmd
+我开始执行cmd
+我执行完了cmd
+我执行完了cmd
+得到了用户ID是8191
+得到了用户ID是8191
+{'ordernumber': '29691200108163196271072', 'username': '水水', 'userid': '8191', 'realmoney': '1.00', 'gamecurrency': '1', 'extdata': '112', 'sign': '31f39669005ce87cd08f77671a1825fd'}
+{'ordernumber': '29691200108162903481070', 'username': '水水', 'userid': '8191', 'realmoney': '1.00', 'gamecurrency': '1', 'extdata': '111', 'sign': '31f39669005ce87cd08f77671a1825fd'}
+[pid: 10251|app: 0|req: 3/2] 47.96.143.212 () {34 vars in 751 bytes} [Wed Jan  8 17:32:48 2020] POST /pay/getpaidinfo/?ordernumber=29691200108163196271072&userid=%E6%B0%B4%E6%B0%B4&realmoney=1.00&gamecurrency=1&extdata=112&sign=31f39669005ce87cd08f77671a1825fd => generated 27 bytes in 5308 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 10251|app: 0|req: 3/3] 47.96.143.212 () {34 vars in 751 bytes} [Wed Jan  8 17:32:48 2020] POST /pay/getpaidinfo/?ordernumber=29691200108162903481070&userid=%E6%B0%B4%E6%B0%B4&realmoney=1.00&gamecurrency=1&extdata=111&sign=31f39669005ce87cd08f77671a1825fd => generated 27 bytes in 5292 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 10251|app: 0|req: 4/4] 47.96.143.212 () {32 vars in 722 bytes} [Wed Jan  8 17:33:00 2020] POST /pay/getpaidinfo/?ordernumber=29691200108162903481070&userid=%E6%B0%B4%E6%B0%B4&realmoney=1.00&gamecurrency=1&extdata=111&sign=31f39669005ce87cd08f77671a1825fd => generated 27 bytes in 2626 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+我开始执行cmd
+我执行完了cmd
+得到了用户ID是8191
+{'ordernumber': '29691200108163196271072', 'username': '水水', 'userid': '8191', 'realmoney': '1.00', 'gamecurrency': '1', 'extdata': '112', 'sign': '31f39669005ce87cd08f77671a1825fd'}
+[pid: 10253|app: 0|req: 1/5] 47.96.143.212 () {32 vars in 722 bytes} [Wed Jan  8 17:33:00 2020] POST /pay/getpaidinfo/?ordernumber=29691200108163196271072&userid=%E6%B0%B4%E6%B0%B4&realmoney=1.00&gamecurrency=1&extdata=112&sign=31f39669005ce87cd08f77671a1825fd => generated 27 bytes in 5565 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+我开始执行cmd
+我开始执行cmd
+我执行完了cmd
+我执行完了cmd
+得到了用户ID是8191
+得到了用户ID是8191
+{'ordernumber': '29691200108163196271072', 'username': '水水', 'userid': '8191', 'realmoney': '1.00', 'gamecurrency': '1', 'extdata': '112', 'sign': '31f39669005ce87cd08f77671a1825fd'}
+{'ordernumber': '29691200108162903481070', 'username': '水水', 'userid': '8191', 'realmoney': '1.00', 'gamecurrency': '1', 'extdata': '111', 'sign': '31f39669005ce87cd08f77671a1825fd'}
+[pid: 10251|app: 0|req: 5/6] 47.96.143.212 () {32 vars in 722 bytes} [Wed Jan  8 17:33:11 2020] POST /pay/getpaidinfo/?ordernumber=29691200108163196271072&userid=%E6%B0%B4%E6%B0%B4&realmoney=1.00&gamecurrency=1&extdata=112&sign=31f39669005ce87cd08f77671a1825fd => generated 27 bytes in 5249 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 4)
+[pid: 10253|app: 0|req: 2/7] 47.96.143.212 () {32 vars in 722 bytes} [Wed Jan  8 17:33:11 2020] POST /pay/getpaidinfo/?ordernumber=29691200108162903481070&userid=%E6%B0%B4%E6%B0%B4&realmoney=1.00&gamecurrency=1&extdata=111&sign=31f39669005ce87cd08f77671a1825fd => generated 27 bytes in 5244 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.

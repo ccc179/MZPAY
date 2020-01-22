@@ -1,0 +1,24 @@
+{% extends 'mz.html' %}
+{% block content %}
+    <form class="form-inline" action="{% url 'pay:cxingshendan' %}" method="post">
+        <div class="form-group">
+            <label for="exampleInputName2">角色名</label>
+            <input type="text" class="form-control" name="gameuser" placeholder="角色名">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail2">购买数量</label>
+            <select class="form-control" name="extdata">
+                <option value="115">10软妹币388个</option>
+
+            </select>
+            {#    <input type="text" class="form-control" name="n" placeholder="购买组数,1组=5个=1元">#}
+        </div>
+        <button type="submit" class="btn btn-default">点击充值</button>
+    </form>
+    <h2 style="color: red">[醒神丹礼包]</h2>
+        <br>
+    <h3 style="color: red">
+        比例： <u style="color: #49b7fe;" >10软妹币=388个</u>
+
+</h3>
+{% endblock %}

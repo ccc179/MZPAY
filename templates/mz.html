@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="pixel-ratio-1 gr__mz_cgic_cn_com">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    {% load static %}
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>{{title}}</title>
+    <meta name="generator" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="{% static 'css/weui.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/jquery-weui.min.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/pay.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/nivoslider.css' %}" type="text/css" rel="stylesheet">
+    {#    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->#}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+{#<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->#}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+{#<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->#}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-weui.min.js' %}"></script>
+    <style>
+        .paymode {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="pay_index_chose_box">
+    <div id="wrapper">
+        <div class="bx-wrapper" style="max-width: 100%;">
+            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 252px;">
+                <ul id="slider1"
+                    style="width: 315%; position: relative; transition-duration: 0s; transform: translate3d(-720px, 0px, 0px);">
+                    <li style="float: left; list-style: none; position: relative; width: 720px;" class="bx-clone"><a
+                            href="javascript:;"><img src="{% static 'img/1572121512.jpg' %}" alt=""></a></li>
+                    <li style="float: left; list-style: none; position: relative; width: 720px;"><a href="javascript:;"><img
+                            src="{% static 'img/1572121512.jpg' %}" alt=""></a></li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 720px;" class="bx-clone"><a
+                            href="javascript:;"><img src="{% static 'img/1572121512.jpg' %}" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="bx-controls bx-has-pager">
+                <div class="bx-pager bx-default-pager">
+                    <div class="bx-pager-item"><a href="{% url 'pay:index' %}" data-slide-index="0"
+                                                  class="bx-pager-link active">1</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#slider1').bxSlider({
+                auto: true,
+                controls: false//隐藏左右按钮
+            });
+        });
+    </script>
+
+    <style>
+        .weui-cells, .weui-cells::after, .weui-cells::before {
+            border: none;
+            margin-top: 0;
+        }
+    </style>
+
+    <div class="weui-flex" style="padding-bottom:10px;">
+        <div class="weui-flex__item">
+            <a class="ta1" href="https://pan.baidu.com/s/1H-QkxBcZCb6bJcBt2-4F4A" target="_blank"><img class="img1"
+                                                                                        src="{% static 'img/113.png' %}"></a>
+            <p class="tc"><a class="ta2" href="https://pan.baidu.com/s/1H-QkxBcZCb6bJcBt2-4F4A" target="_blank">游戏下载 密码：cpeu</a></p>
+        </div>
+        <div class="weui-flex__item">
+            <a class="ta1" href="http://pay.6799wan.com/Payment/WapService/8df7991802b1f5c8489aa89ef969c06c"
+               target="_blank"><img class="img1" src="{% static 'img/111.png' %}"></a>
+            <p class="tc"><a class="ta2"
+                             href="http://pay.6799wan.com/Payment/WapService/8df7991802b1f5c8489aa89ef969c06c"
+                             target="_blank">元宝赞助(暂未开通)</a></p>
+        </div>
+        <div class="weui-flex__item">
+            <a class="ta1" href="{% url 'pay:index' %}" target="_blank"><img class="img1"
+                                                                                             src="{% static 'img/112.png' %}"></a>
+            <p class="tc"><a class="ta2" href="{% url 'pay:index' %}" >道具礼包</a></p>
+        </div>
+        <div class="weui-flex__item">
+            <a class="ta1" href="http://s1.rvip.top:66/" target="_blank"><img class="img1"
+                                                                                  src="{% static 'img/114.png' %}"></a>
+            <p class="tc"><a class="ta2" href="http://s1.rvip.top:66/" target="_blank">游戏后台</a></p>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="paymode">
+        <div class="head">
+            <div class="weui-cells__title">赞助礼包（赞助金将用于升级服务器配置）</div>
+        </div>
+        {% block content %}
+        <div class="body">
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="{% url 'pay:jin66' %}"> 金柳露礼包</a>
+                        <b>软妹币20=2000</b>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="{% url 'pay:sancai' %}">三才勾玉礼包</a>
+                        <b>软妹币58=999</b>
+                    </div>
+                </div>
+
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="{% url 'pay:renshenguo' %}">人参果礼包</a>
+                        <b>软妹币10=388</b>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="{% url 'pay:xingshendan' %}">醒神丹礼包</a>
+                        <b>软妹币10=388</b>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="{% url 'pay:jineng' %}">顶级技能自选包</a>
+                        <b>软妹币20=20</b>
+                    </div>
+                </div>
+                                {% comment %}
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="http://mz.cgic.cn.com/gift_post.php?gameid=4&amp;infoid=56">金柳露包</a>
+                        <b>赞助：¥10</b>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="http://mz.cgic.cn.com/gift_post.php?gameid=4&amp;infoid=55">绑定元宝</a>
+                        <b>赞助：¥100</b>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="http://mz.cgic.cn.com/gift_post.php?gameid=4&amp;infoid=54">绑定元宝</a>
+                        <b>赞助：¥50</b>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="probox">
+                        <a href="http://mz.cgic.cn.com/gift_post.php?gameid=4&amp;infoid=53">绑定元宝</a>
+                        <b>赞助：¥10</b>
+                    </div>
+                </div>
+                {% endcomment %}
+            </div>
+            <div class="weui-flex"></div>
+        </div>
+        {% endblock %}
+    </div>
+
+{% comment %}
+    <div class="paymode">
+        <div class="head">
+            <div class="weui-cells__title">游戏攻略</div>
+        </div>
+        <div class="">
+            <div class="weui-cells">
+                <a class="weui-cell weui-cell_access" href="http://mz.cgic.cn.com/productshow.php?cid=23&amp;id=22">
+                    <div class="weui-cell__bd">
+                        <p>游戏攻略</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" href="http://mz.cgic.cn.com/productshow.php?cid=23&amp;id=21">
+                    <div class="weui-cell__bd">
+                        <p>门派特性</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" href="http://mz.cgic.cn.com/productshow.php?cid=23&amp;id=20">
+                    <div class="weui-cell__bd">
+                        <p>掉落详情</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" href="http://mz.cgic.cn.com/productshow.php?cid=23&amp;id=19">
+                    <div class="weui-cell__bd">
+                        <p>神器属性</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+</div>
+<div class="banquan">&nbsp;&nbsp;</div>
+<!--<div class="pay_footer">
+<p>Copyright © 2019</p>
+</div>-->
+<script type="text/javascript">
+
+</script>
+<div class="tbox" style="display: none;"><a href="javascript:void(0)" id="gotop"></a></div>
+</body>
+</html>

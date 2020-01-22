@@ -1,0 +1,245 @@
+# import json
+import os
+import time
+
+# from KEYS.keys import SECRET_KEYS
+from OnlinePay.settings import BASE_DIR
+
+from django.http import HttpResponse
+from django.shortcuts import render
+import paramiko
+
+from Pay.models import OrderList
+
+
+def online_pay(request):
+    context = {
+        "title":"吾爱梦猪"
+    }
+    return render(request, 'mz.html',context=context)
+
+
+def take_item(orderinfo):
+    '''
+    :param orderinfo:
+    :return: 负责物品发放，发放完毕后返回ok
+    '''
+    print(orderinfo)
+    userid = orderinfo.userid
+    realmoney = orderinfo.realmoney
+    extdata = orderinfo.extdata
+    if extdata == "110" and realmoney == 10:  # 110是金柳露210151109 ，10元999个
+        count_item = 999
+        itemid = 210151109
+    elif extdata == "111" and realmoney == 20:  # 111是金柳露210151109 ，20元2000个
+        count_item = 2000
+        itemid = 210151109
+    elif extdata == "112" and realmoney == 50:  # 112是金柳露210151109 ，50元6000个
+        count_item = 6000
+        itemid = 210151109
+    elif extdata == "113" and realmoney == 58:  # 113是三才勾玉210151112 ，58元999个
+        count_item = 999
+        itemid = 210151112
+    elif extdata == "114" and realmoney == 10:  # 114是人参果211401000 ，10元388个
+        count_item = 388
+        itemid = 211401000
+    elif extdata == "115" and realmoney == 50:  # 115是醒神丹211300000 ，10元388个
+        count_item = 388
+        itemid = 211300000
+    elif extdata == "116" and realmoney == 50:  # 116是顶级技能自选包254301051 ，10元10个
+        count_item = 10
+        itemid = 254301051
+    elif extdata == "117" and realmoney == 50:  # 117是顶级技能自选包254301051 ，20元25个
+        count_item = 25
+        itemid = 254301051
+    danren_str = '''#!/bin/bash
+
+
+LANG=en_US.UTF-8
+
+title="您有一条未读快递信息"
+content="您赞助的礼包已准时送达！感谢使用梦诛快递！如有问题请联系群主QQ：2223099004"
+itemid='''+itemid+'''
+count='''+count_item+'''
+
+java -cp JMXTool.jar com.wanmei.mhzx.InvokeMethod 127.0.0.1 18608 controlRole kym IWEB:type=GameControl mailItemAward long '''+userid+''' java.lang.String $title java.lang.String $content int $itemid int $count
+'''
+    localpath = os.path.join(BASE_DIR, 'static/ceshi.sh')
+    with open(localpath,'w',encoding='utf-8') as f:
+        f.write(danren_str)
+    trans = paramiko.Transport(('211.159.186.68',22))
+    trans.connect(username='root',password='str147852.')
+    filename = 'ceshi.sh'
+    path = '/home/mhzx/mhzx_4095/gs/'
+    remotepath = path+filename
+
+    sftp = paramiko.SFTPClient.from_transport(trans)
+    sftp.put(localpath=localpath, remotepath=remotepath)
+    time.sleep(2)
+    cmd = 'sh /home/mhzx/mhzx_4095/gs/ceshi.sh'
+
+    # 将sshclient的对象的transport指定为以上的trans
+    ssh = paramiko.SSHClient()
+    ssh._transport = trans
+    # 执行命令，和传统方法一样
+    stdin, stdout, stderr = ssh.exec_command(cmd)
+    print(stdout.read().decode())
+
+    # 关闭连接
+    trans.close()
+    return HttpResponse("ok")
+
+
+# 金柳露
+def pay_jin66(request):
+    context = {
+        "title":"金柳露礼包"
+    }
+    return render(request,'pay_jin66.html',context=context)
+
+
+def controller_pay_jin66(request):
+    extdata = request.POST.get('extdata')
+    print(extdata)
+    if extdata == "110":
+        paymoney = 10
+    elif extdata == "111":
+        paymoney = 20
+    elif extdata == "112":
+        paymoney = 50
+    context = {
+        "gameuser" : request.POST.get('gameuser'),
+        "paymoney" : paymoney,
+        "extdata" : extdata,
+    }
+    return render(request,'jump.html',context=context)
+
+
+# 三才勾玉
+def pay_sancai(request):
+    context = {
+        "title":"三才勾玉礼包"
+    }
+    return render(request, 'pay_sancai.html', context=context)
+
+
+def controller_pay_sancai(request):
+    extdata = request.POST.get('extdata')
+    if extdata == "113":
+        paymoney = 58
+    context = {
+        "gameuser" : request.POST.get('gameuser'),
+        "paymoney" : paymoney,
+        "extdata" : extdata,
+    }
+    return render(request,'jump.html',context=context)
+
+
+# 人参果
+def pay_renshenguo(request):
+    context = {
+        "title":"人参果礼包"
+    }
+    return render(request, 'pay_renshenguo.html', context=context)
+
+
+def controller_pay_renshenguo(request):
+    extdata = request.POST.get('extdata')
+    print(extdata)
+    if extdata == "114":
+        paymoney = 10
+    context = {
+        "gameuser" : request.POST.get('gameuser'),
+        "paymoney" : paymoney,
+        "extdata" : extdata,
+    }
+    return render(request,'jump.html',context=context)
+
+
+# 醒神丹
+
+def pay_xingshendan(request):
+    context = {
+        "title":"醒神丹礼包"
+    }
+    return render(request, 'pay_xingshendan.html', context=context)
+
+
+def controller_pay_xingshendan(request):
+    extdata = request.POST.get('extdata')
+    if extdata == "115":
+        paymoney = 10
+    context = {
+        "gameuser" : request.POST.get('gameuser'),
+        "paymoney" : paymoney,
+        "extdata" : extdata,
+    }
+    return render(request,'jump.html',context=context)
+
+
+# 顶级技能自选包
+
+def pay_jineng(request):
+    context = {
+        "title":"顶级技能自选包"
+    }
+    return render(request, 'pay_jineng.html', context=context)
+
+
+def controller_pay_jineng(request):
+    extdata = request.POST.get('extdata')
+    if extdata == "116":
+        paymoney = 10
+    elif extdata == "117":
+        paymoney =20
+    context = {
+        "gameuser" : request.POST.get('gameuser'),
+        "paymoney" : paymoney,
+        "extdata" : extdata,
+    }
+    return render(request,'jump.html',context=context)
+
+
+# 订单回执接口
+def get_paidinfo(request):
+    getroleid_str = '''#!/bin/bash
+
+
+    java -cp JMXTool.jar com.wanmei.mhzx.InvokeMethod 127.0.0.1 18608 controlRole kym IWEB:type=GameControl getRoleidByName java.lang.String ''' +request.GET.get('userid')
+    localpath = os.path.join(BASE_DIR, 'static/getroleid_str.sh')
+    with open(localpath, 'w', encoding='utf-8') as f:
+        f.write(getroleid_str)
+    trans = paramiko.Transport(('211.159.186.68', 22))
+    trans.connect(username='root', password='str147852.')
+    filename = 'getroleid_str.sh'
+    path = '/home/mhzx/mhzx_4095/gs/'
+    remotepath = path + filename
+
+    sftp = paramiko.SFTPClient.from_transport(trans)
+    sftp.put(localpath=localpath, remotepath=remotepath)
+    time.sleep(2)
+    cmd = 'sh /home/mhzx/mhzx_4095/gs/getroleid_str.sh'
+
+    # 将sshclient的对象的transport指定为以上的trans
+    ssh = paramiko.SSHClient()
+    ssh._transport = trans
+    # 执行命令，和传统方法一样
+    stdin, stdout, stderr = ssh.exec_command(cmd)
+    response_id = stdout.read().decode().split(str="=")[-1]
+    print("得到了用户ID是{}".format(response_id))
+    # 关闭连接
+    trans.close()
+    result = {
+        'ordernumber': request.GET.get('ordernumber'),
+        'username':request.GET.get('userid'),
+        'userid': response_id,
+        'realmoney': request.GET.get('realmoney'),
+        'gamecurrency': request.GET.get('gamecurrency'),
+        'extdata': request.GET.get('extdata'),
+        'sign': request.GET.get('sign')}
+
+    order = OrderList()
+    order.order_info = result
+    order.save()
+
+    take_item(result)

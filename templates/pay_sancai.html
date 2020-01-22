@@ -1,0 +1,27 @@
+{% extends 'mz.html' %}
+{% block content %}
+    <form class="form-inline" action="{% url 'pay:csancai' %}" method="post">
+        <div class="form-group">
+            <label for="exampleInputName2">角色名</label>
+            <input type="text" class="form-control" name="gameuser" placeholder="角色名">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail2">购买数量</label>
+            <select class="form-control" name="extdata">
+                <option value="113">58软妹币999个</option>
+            </select>
+            {#    <input type="text" class="form-control" name="n" placeholder="购买组数,1组=5个=1元">#}
+        </div>
+        <button type="submit" class="btn btn-default">点击充值</button>
+    </form>
+    <h2 style="color: red">[三才勾玉礼包]</h2>
+        <br>
+    <h3 style="color: red">
+        比例： <u style="color: #49b7fe;" >58软妹币=999个</u>
+        </h3>
+    <hr>
+    <h4>
+<p style="color: #fe79de;">（如合成的宠物不需要，可以分解成333个三才勾玉！或者保留后续更新新神兽再使用！）</p>
+
+</h4>
+{% endblock %}

@@ -1,0 +1,138 @@
+@charset "utf-8";
+body{background:#fff;font-size:14px;line-height:25px;}
+body::before{background:#fff;}
+.pay_footer{background:#eee;border-top:1px solid #ddd;height:80px;width:100%;margin-top:40px;}
+.pay_footer p{text-align:center;line-height:80px;}
+.tc{text-align:center;}
+.pay_index_chose_box{width:720px;margin:20px auto;}
+.fenqu,.zhuyi,.gamebox{border:1px solid #ddd;background:#F8F8F8;} 
+.head{border-bottom:1px solid #efefef;}
+.head .weui-cells__title{padding-bottom:0.47em;}
+.body{padding:20px;}
+.fenqu .body li{width:270px;height:125px;background:#fff;border:1px solid #ddd;text-align:center;float:left;margin-bottom:15px;margin-right:15px;}
+.fenqu .body li b{font: 22px/35px Microsoft YaHei,微软雅黑,微软雅黑;color: #ce1f2a;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width:100%;display:block;line-height:50px;text-align:center;}
+.fenqu .body li p{}
+.fenqu .body li a{color: #fff;background: #1882BE;border-radius: 5px;cursor: pointer;width: 125px;height: 30px;display:block;margin:auto;line-height:30px;margin-top:10px;}
+
+.ta1{width:60px;height:50px;display:block;margin:auto;margin-top:10px;border-radius:30px;padding-top:10px;}
+.ta2{font-size:14px;color:#333;}
+.img1{width:40px;height:40px;display:block;margin:auto;}
+
+.zhuyi{margin-top:30px;}
+.zhuyi .body p{line-height:30px;}
+
+.duihuan{border:1px solid #ddd;background:#F8F8F8;border-bottom:none;margin-bottom:20px;}
+.duihuan .head span{margin-left:20px;}
+.duihuan .head font{margin-right:10px;}
+
+.paymode{border-top:10px solid #f8f8f8;}
+.paymode .body li{width:180px;height:80px;background:#fff;border:1px solid #ddd;text-align:center;float:left;margin-right:20px;margin-bottom:15px;position:relative;}
+.paymode .body li b{font: 22px/35px Microsoft YaHei,微软雅黑,微软雅黑;color: #ce1f2a;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width:100%;display:block;line-height:40px;text-align:center;}
+.paymode .body li a{color: #fff;background: #1882BE;border-radius: 5px;cursor: pointer;width: 125px;height: 30px;display:block;margin:auto;line-height:30px;margin-top:0px;}
+.paymode .body li em{width:50px;font-size:12px;background:red;color:#fff;height:20px;display:block;font-style:normal;position:absolute;right:-10px;top:-10px;line-height:20px;border-radius:5px;}
+
+.gamebox td{height:50px;}
+.gamebox .inputxt{width:312px;height:42px;border:1px solid #ddd;background:#fff;padding:5px 10px;}
+.paytijiao{padding:20px 0;}
+.paytijiao input{width:120px;background:#1882BE;color:#fff;height:40px;border-radius:5px;display:inline-block;margin-right:30px;font-size:16px;border:none;}
+
+.probox{background:#d6a96e;border-radius:4px;text-align:center;height:5em;margin:auto;margin-bottom:10px;width:95%;} 
+.probox a{line-height:3.1em;font-size:1.1em;color:#fff;}
+.probox b{line-height:0.9em;font-size:0.9em;color:#fff;display:block;text-align:center;font-weight:normal;}
+
+.top{height:40px;width:100%;background:#0096bf;position:relative;text-align:center;font-size:16px;color:#fff;line-height:40px;overflow:hidden}
+.top a.a1{width:14px;height:17px;display:block;background:url(../images/backpre.png) no-repeat;position:absolute;left:10px;top:12px;}
+.top a.a2{width:25px;height:25px;display:block;background:url(../images/foot/home.png) no-repeat center center;position:absolute;right:10px;top:7px;background-size:40px;}
+.top span{display:block;margin-left:25px;margin-right:35px;text-align:center;}
+.newsshowpage{}
+.newsshowpage h2.title{font-size:16px;text-align:center;padding:10px 10px;}
+.newsshowpage h3.ftitle{font-size:12px;text-align:center;padding:10px 10px;margin:0 15px;border-bottom:1px dotted #ddd;margin-bottom:15px;color:#999;font-weight:normal;}
+.newsshowpage .about{margin:0 15px;}
+.newsshowpage .about .info img{width:100%;height:auto;}
+
+/*下单*/ 
+.order{width:960px;margin:10px auto 40px;}
+.ordertit{font-size:20px;color:#666;font-weight:bold;}
+.ordertit b{font-size:14px;color:#999;font-weight:normal;margin-left:20px;}
+
+.order_pay_box .feema{padding:40px;position:relative;}
+.order_pay_box .feema .topchose{display:none;}
+.order_pay_box .feema .paybox b{width:296px;height:80px;display:block;background:url(../images/wxlogo.png) no-repeat left top;background-size:296px 80px;position:absolute;left:40px;top:40px;}
+.order_pay_box .feema .paybox img{width:320px;height:320px;display:block;margin:20px auto;}
+.order_pay_box .feema .paybox p.p1{width:260px;height:86px;display:block;background:url(../images/feefoot.png) no-repeat left top;overflow:hidden;text-indent:9999em;margin:auto;font-size:0;line-height:0;}
+
+.order_pay_box .payinfo{background:#f2f2f2;height:110px;border-top:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+.order_pay_box .payinfo span{float:right;margin-right:40px;line-height:110px;font-size:18px;}
+.order_pay_box .payinfo span em{font-size:30px;font-style:normal;color:#ff0000;}
+.order_pay_box .payinfo p{line-height:110px;margin-left:30px;font-size:16px;}
+.order_pay_box .ordertit{font-size:26px;color:#666;font-weight:bold;margin-left:30px;margin-bottom:30px;}
+
+.order_pay_box .feema .paybox .success img{width:100px;height:100px;border-radius:50%;}
+.order_pay_box .feema .paybox .success .p2{text-align:center;font-size:18px;line-height:86px;}
+.order_pay_box .feema .paybox a{background:#c40000;font-size:14px;display:block;margin:20px auto;height:35px;border-radius:5px;color:#fff;text-align:center;line-height:35px;width:250px;}
+
+.paytijiao input.back{background:#eee;color:#333;}
+
+.red{color:#ff0000;}
+.p111{font-size:12px;line-height:25px;}
+.d111{margin-bottom:10px;padding-bottom:10px;background:#fff;padding:10px 15px;}
+.d111 img{max-width:100%;}
+.weui-cells{font-size:12px;}
+.weui-label{width:120px;font-size:12px;}
+.p222{font-size:14px;line-height:25px;background:#fff;padding:10px 15px;}
+
+@media screen and (max-width: 640px) { 
+   .pay_index_chose_box,.order{width:100%;margin-top:0;box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */} 
+.pay_footer{margin-top:0;}
+.head{}
+.head b{margin-left:0;}
+.order_pay_box .feema .paybox b{display:none;}
+.order_pay_box .feema .paybox img{width:100%;height:auto;}
+.order_pay_box .payinfo p{line-height:55px;}
+.order_pay_box .payinfo span{float:none;display:block;line-height:55px;margin-left:30px;}
+.order_pay_box .payinfo span em{font-size:18px;}
+.paytijiao{margin-left:20px;}
+
+.paymode .body li{width:45%;height:80px;background:#fff;border:1px solid #ddd;text-align:center;float:left;margin-right:0px;margin-bottom:15px;position:relative;}
+.paymode .body li:nth-of-type(even){float:right;}
+.paymode .body li b{font: 22px/35px Microsoft YaHei,微软雅黑,微软雅黑;color: #ce1f2a;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width:100%;display:block;line-height:40px;text-align:center;}
+.paymode .body li a{color: #fff;background: #1882BE;border-radius: 5px;cursor: pointer;width: 70%;height: 30px;display:block;margin:auto;line-height:30px;margin-top:0px;}
+.paymode .body li em{width:50px;font-size:12px;background:red;color:#fff;height:20px;display:block;font-style:normal;position:absolute;right:-10px;top:-10px;line-height:20px;border-radius:5px;}
+}
+
+/*验证必须*/
+/*==========以下部分是Validform必须的===========*/
+.Validform_checktip{
+	margin-left:8px;
+	line-height:20px;
+	height:20px;
+	overflow:hidden;
+	color:#999;
+	font-size:12px;
+}
+.Validform_right{
+	color:#71b83d;
+	padding-left:20px;
+	background:url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong{
+	color:red;
+	padding-left:20px;
+	white-space:nowrap;
+	background:url(../images/error.png) no-repeat left center;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}
