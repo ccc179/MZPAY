@@ -15,7 +15,7 @@ from Pay.tasks import take_item
 
 def online_pay(request):
     context = {
-        "title": "吾爱梦猪"
+        "title": "天道酬勤玩家自助中心"
     }
     return render(request, 'mz.html', context=context)
 
@@ -32,11 +32,11 @@ def controller_pay_jin66(request):
     extdata = request.POST.get('extdata')
     print(extdata)
     if extdata == "110":
-        paymoney = 1  # 10
+        paymoney = 10  # 10
     elif extdata == "111":
-        paymoney = 1  # 20
+        paymoney = 20  # 20
     elif extdata == "112":
-        paymoney = 1  # 50
+        paymoney = 50  # 50
     context = {
         "gameuser": request.POST.get('gameuser'),
         "paymoney": paymoney,
@@ -56,7 +56,7 @@ def pay_sancai(request):
 def controller_pay_sancai(request):
     extdata = request.POST.get('extdata')
     if extdata == "113":
-        paymoney = 1  # 58
+        paymoney = 58  # 58
     context = {
         "gameuser": request.POST.get('gameuser'),
         "paymoney": paymoney,
@@ -77,7 +77,7 @@ def controller_pay_renshenguo(request):
     extdata = request.POST.get('extdata')
     print(extdata)
     if extdata == "114":
-        paymoney = 1  # 10
+        paymoney = 10  # 10
     context = {
         "gameuser": request.POST.get('gameuser'),
         "paymoney": paymoney,
@@ -98,7 +98,7 @@ def pay_xingshendan(request):
 def controller_pay_xingshendan(request):
     extdata = request.POST.get('extdata')
     if extdata == "115":
-        paymoney = 1  # 10
+        paymoney = 10  # 10
     context = {
         "gameuser": request.POST.get('gameuser'),
         "paymoney": paymoney,
@@ -119,9 +119,9 @@ def pay_jineng(request):
 def controller_pay_jineng(request):
     extdata = request.POST.get('extdata')
     if extdata == "116":
-        paymoney = 1  # 20
+        paymoney = 20  # 20
     elif extdata == "117":
-        paymoney = 1  # 50
+        paymoney = 50  # 50
     context = {
         "gameuser": request.POST.get('gameuser'),
         "paymoney": paymoney,
@@ -134,7 +134,7 @@ def controller_pay_jineng(request):
 def get_paidinfo(request):
     result = {
         'ordernumber': request.GET.get('ordernumber'),
-        'userid': request.GET.get('username'),
+        'userid': request.GET.get('userid'),
         'realmoney': request.GET.get('realmoney'),
         'gamecurrency': request.GET.get('gamecurrency'),
         'extdata': request.GET.get('extdata'),

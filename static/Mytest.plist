@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<!-- 需要安装的ipa包在服务器的路径 -->
+					<string>https://www.52qq.fun/static/岁月如歌.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>needs-shine</key>
+					<true/>
+					<key>url</key>
+					<!-- 安装时需要显示的小图标在服务器的路径 -->
+					<string>http://i1.fuimg.com/709089/ea04d2770ca701ab.png</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>needs-shine</key>
+					<true/>
+					<key>url</key>
+					<!-- 安装时需要显示的大图标在服务器的路径 -->
+					<string>http://i1.fuimg.com/709089/be30b4f38bd68ec6.png</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>com.zloong.eu.mhzx</string>
+				<key>bundle-version</key>
+				<string>1.1.4</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>title</key>
+				<string>吾爱梦诛2020</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -19,8 +19,8 @@ def take_item(orderinfo):
     # localpath = os.path.join(BASE_DIR, 'static/getroleid_str.sh')
     # with open(localpath, 'w', encoding='utf-8') as f:
     #     f.write(getroleid_str)
-    trans = paramiko.Transport(('211.159.186.68', 22))
-    trans.connect(username='root', password='str147852.')
+    trans = paramiko.Transport(('111.229.222.18', 22))
+    trans.connect(username='wqk', password='AbC258012')
     # filename = 'getroleid_str.sh'
     # path = '/home/mhzx/mhzx_4095/gs/'
     # remotepath = path + filename
@@ -56,28 +56,28 @@ def take_item(orderinfo):
         realmoney = int(float(orderinfo.get('realmoney')))
         extdata = orderinfo.get('extdata')
         print("进入if语句")
-        if extdata == "110" and realmoney == 1:#10:   110是金柳露210151109 ，10元999个
+        if extdata == "110" and realmoney == 10:#10:   110是金柳露210151109 ，10元999个(这一档取消了)
             count_item = '999'
             itemid = '210151109'
-        elif extdata == "111" and realmoney == 1:#20:   111是金柳露210151109 ，20元2000个
+        elif extdata == "111" and realmoney == 20:#20:   111是金柳露210151109 ，20元2000个
             count_item = '2000'
             itemid = '210151109'
-        elif extdata == "112" and realmoney == 1:#50:   112是金柳露210151109 ，50元6000个
+        elif extdata == "112" and realmoney == 50:#50:   112是金柳露210151109 ，50元6000个
             count_item = '6000'
             itemid = '210151109'
-        elif extdata == "113" and realmoney == 1:#58:   113是三才勾玉210151112 ，58元999个
+        elif extdata == "113" and realmoney == 58:#58:   113是三才勾玉210151112 ，58元999个
             count_item = '999'
             itemid = '210151112'
-        elif extdata == "114" and realmoney == 1:#10:   114是人参果211401000 ，10元388个
+        elif extdata == "114" and realmoney == 10:#10:   114是人参果211401000 ，10元388个
             count_item = '388'
             itemid = '211401000'
-        elif extdata == "115" and realmoney == 1:#50:   115是醒神丹211300000 ，10元388个
+        elif extdata == "115" and realmoney == 10:#10:   115是醒神丹211300000 ，10元388个
             count_item = '388'
             itemid = '211300000'
-        elif extdata == "116" and realmoney == 1:#50:   116是顶级技能自选包254301051 ，10元10个
+        elif extdata == "116" and realmoney == 20:#10:   116是顶级技能自选包254301051 ，20元20个
             count_item = '20'
             itemid = '254301051'
-        elif extdata == "117" and realmoney == 1:#50:   117是顶级技能自选包254301051 ，20元25个
+        elif extdata == "117" and realmoney == 50:#20:   117是顶级技能自选包254301051 ，50元60个
             count_item = '50'
             itemid = '254301051'
         print("开始生成字符串")
@@ -106,7 +106,7 @@ def take_item(orderinfo):
         # sftp.put(localpath=localpath, remotepath=remotepath)
         # time.sleep(1)
         cmd = 'sh /home/mhzx/mhzx_4095/gs/ceshi.sh '+itemid+' '+count_item+' '+response_id
-
+        print(cmd)
         # 将sshclient的对象的transport指定为以上的trans
         # ssh = paramiko.SSHClient()
         # ssh._transport = trans
