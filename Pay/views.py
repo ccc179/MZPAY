@@ -153,3 +153,48 @@ def get_paidinfo(request):
         return HttpResponse("ok")
     else:
         return HttpResponse("验证失败！")
+
+
+def my_attribute(request):
+    if request.method == 'GET':
+        zhuan_list= [[1, 0], [2, 0], [3, 0], [4, 0], [5, 0],
+                       [6, 0], [7, 0], [8, 0], [9, 0]]
+        return render(request, 'My_attribute.html', context=locals())
+    elif request.method == 'POST':
+        print("这里是post了")
+        print(request.POST)
+        level = int(request.POST.get('level_now'))
+        result = (level - 1) * 5
+        zhuan_1 = int(request.POST.get('zhuan_1'))
+        if zhuan_1:
+            result += (zhuan_1 - 50) * 5 + 2000
+        zhuan_2 = int(request.POST.get('zhuan_2'))
+        if zhuan_2:
+            result += (zhuan_2 - 50) * 5 + 2000
+        zhuan_3 = int(request.POST.get('zhuan_3'))
+        if zhuan_3:
+            result += (zhuan_3 - 50) * 5 + 2000
+        zhuan_4 = int(request.POST.get('zhuan_4'))
+        if zhuan_4:
+            result += (zhuan_4 - 50) * 5 + 2000
+        zhuan_5 = int(request.POST.get('zhuan_5'))
+        if zhuan_5:
+            result += (zhuan_5 - 50) * 5 + 2000
+        zhuan_6 = int(request.POST.get('zhuan_6'))
+        if zhuan_6:
+            result += (zhuan_6 - 50) * 5 + 2000
+        zhuan_7 = int(request.POST.get('zhuan_7'))
+        if zhuan_7:
+            result += (zhuan_7 - 50) * 5 + 2000
+        zhuan_8 = int(request.POST.get('zhuan_8'))
+        if zhuan_8:
+            result += (zhuan_8 - 50) * 5 + 2000
+        zhuan_9 = int(request.POST.get('zhuan_9'))
+        if zhuan_9:
+            result += (zhuan_9 - 50) * 5 + 2000
+
+        print(result)
+        return render(request, 'My_attribute.html',
+                      context={'result': result, 'zhuan_list': [[1,zhuan_1], [2,zhuan_2], [3,zhuan_3], [4,zhuan_4], [5,zhuan_5],
+                                                                [6,zhuan_6], [7,zhuan_7], [8,zhuan_8], [9,zhuan_9]],
+                               'level_now':level})
